@@ -1,1 +1,26 @@
-# komprese
+# Ukládání a komprese dat
+
+- úložiště slouží k uchování zakódovaných informací
+- **magnetická** úložiště
+	- první byly magnetické pásky, kazety a diskety, které ale měly malou kapacitu a malou rychlost
+	- po nich přišly pevné disky (HDD) - kotouč potažený magnetickou vrstvou, na které jsou pak stopy a sektory. Pevný disk může mít i víc kotoučů a čtení/zápis je prováděn přes pohyblivou ručičku. Výhodou HDD je velká kapacita a slušná rychlost
+- **optická** úložiště
+	- CD, DVD a BD. Čtení a zápis je prováděn laserem, který zapisuje stav do speciální vrstvy. 
+	- CD má kapacitu ~700MB, DVD má kapacitu ~5GB. BD má až 700GB.
+	- Výhodou je relativně nízká cena a objem, nevýhodou je špatná přepsatelnost dat, malá rychlost a možnost poškrábání.
+- **elektronická** úložiště
+	- fungují na principu flash paměti, která má buňky kam jdou zapisovan nuly a jedničky
+	- USB Flash disky - malá 3cm pičovinka co se zapíchne do USB portu na počítači, je na ní několik těhle flash úložišť a malej čip co je spravuje. Obvykle mají 16/32GB, ale lze i míň i víc.
+	- Pamťové karty SD - také je v ní flash úložiště, jen je to jinej tvar a nepřipojuje se přes USB. Prostě se zapíchne do portu. Obvykle používaná u kamer, mobilů a foťáků, mají desítky až stovky GB
+	- SSD disk - nejnovější nejlepší a nejdražší disk, prodávaj se i několika TB, jsou extrémně rychlý, jakože fakt nesrovnatelně i s HDD, ale platí se za to. Nevýhodou je prej životnost, ale reálně to neni pravda, háka se šlajsovou prostě jen živou před 10 lety, kdy se o to lidi báli
+- **Kapacita** - množství informací, které se na disk vejde
+- **Životnost** - jak dlouho disk vydrží
+- **Komprese** (divný lidi říkaj komprimace)
+	- máš nějaký data, což je zakódovaná informace, a ty s ní uděláš nějakej trik aby zabírala míň místa. Konkrétně jí komprimuješ (to je ten trik) a uložíš jí jako komprimovanou, aby ji potom mohl člověk zase otevřít. Ve svý podstatě je to zase jen zakódování informace, tentokrát za účelem zmenšení místa na disku.
+	- a to jak to uděláš je zase na tobě, ale je mega těžký vymyslet něco co bude fakt efektivní
+	- příklad komprese:
+		- budou li za sebou víc než 3 stejné znaky/číslice, nahradíme je počtem a znakem/číslicí, tedy AAAAOOADDDBFDDDD -> 4AOOA3DBF4D
+		- nic extra, je to jen začátečnická komprese, ale příklad hezkej
+	- programy na kompresi - Zip, Tar, GZip, Rar (stačí zip, rar)
+	- dělí se na ztrátovou a bezztrátovou kompresi. Bezztrátová je běžnější a dá se tim komprimovat všechno, to je zip, rar. Ztrátová komprese je většinou jen u médií. Malá ztráta kvality je pro velkou úsporu místa. (nejde vrátit)
+	- kompresní poměr je podíl velikosti dat před a po komprimaci, čím větší tím lepší. ušetřené místo je pak rozdíl velikosti před a po, pak se to dá vyjádřit v procentech
